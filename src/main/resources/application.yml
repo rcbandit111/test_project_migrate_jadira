@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: test
+  jackson:
+    default-property-inclusion: non_null
+  jmx:
+    enabled: false
+  datasource:
+    dataSourceClassName: org.postgresql.ds.PGSimpleDataSource
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/database?currentSchema=database
+    connectionTimeout: 10000
+    maxLifetime: 18000000
+    maximumPoolSize: 10
+    username: test
+    password: test
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: postgresql
+  sql:
+    init:
+      platform: org.hibernate.dialect.PostgreSQL95Dialect
